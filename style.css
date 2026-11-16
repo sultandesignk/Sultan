@@ -122,5 +122,53 @@ h2 { font-size: clamp(42px, 5vw, 62px); font-weight: 800; }
   .contact-section { padding: 85px 0 70px; }
   .social-links { flex-wrap: wrap; margin-top: 45px; }
   .footer-inner { flex-wrap: wrap; gap: 12px; }
+ 
+.video-section {
+  background: #101217;
+  padding: 100px 0;
+}
+
+.video-heading {
+  color: white;
+  margin: 40px 0 20px;
+  font-size: 22px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #30343c;
+  border-radius: 10px;
+}
+
+.short-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.short-grid iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 1px solid #30343c;
+  border-radius: 10px;
+}
+
+@media (max-width: 760px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .short-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
   .footer p { order: 3; width: 100%; margin: 5px 0 0; }
 }
